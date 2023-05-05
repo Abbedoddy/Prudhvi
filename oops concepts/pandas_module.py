@@ -57,7 +57,7 @@ print(s)'''
 #index – must be unique and is used for row labels. Default value in np.arange(n) 
 #columns –Default value of np.arange(n) is for columns if no index value is passed. 
 #dtype – declare the data type we want to represent for each column 
-import pandas as pd 
+'''import pandas as pd 
 df = pd.DataFrame() 
 print(df) 
 import pandas as pd 
@@ -85,4 +85,25 @@ import pandas as pd
 d = {'one' : pd.Series([1, 2, 3], index=['a', 'b', 'c']), 
    'two' : pd.Series([1, 2, 3, 4], index=['a', 'b', 'c', 'd'])} 
 df = pd.DataFrame(d) 
-print(df)  
+print(df)'''
+import pandas as pd
+data = {
+  "calories": [420, 380, 390],
+  "duration": [50, 40, 45]
+}
+#load data into a DataFrame object:
+df = pd.DataFrame(data)
+print(df)   
+print(df.loc[0])
+print(df.loc[[0, 1]])
+import pandas as pd
+data = {
+  "calories": [420, 380, 390],
+  "duration": [50, 40, 45]
+}
+df = pd.DataFrame(data, index = ["day1", "day2", "day3"])
+print(df) 
+print(df.loc["day2"])
+import pandas as pd
+df = pd.read_csv('Raghav March Sale  As on date.csv')
+print(df) 
