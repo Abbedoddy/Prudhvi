@@ -1,0 +1,40 @@
+identifiers and keyword
+variable and data
+
+valid starting chars of identifiers : A-Z,a-z,_
+invalid starting chars of identifiers : $#@()0-9
+case(lower & upper) sensitive language - Name , name, NAME
+
+keywords / reserved keywords 33 keywords
+
+if/elif/else/while/for/in/ - Conditional Statements
+try/except/finally/raise/with - Exceptional Handling
+import/return/yield - used in functions
+break/pass/continue - loops/control flow
+print/def/class - functions
+
+a = 10
+a = 20
+b = "Python is programming langugae"
+c = 45.7
+d = 1+0j
+e = a+c
+print(a)
+print(b)
+print(c)
+print(d)
+print(65.7)
+print(20+45.7)
+print(e)
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(id(a))
+print(id(b))
+print(id(c))
+print(id(d))
+
+
+
+

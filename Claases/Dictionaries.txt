@@ -1,0 +1,6 @@
+Dictionaries - one of teh data type/data structure/container
+- it is used to store multiple data items
+- represnted in {} but in the form of Key:Value pair
+- it also doesnot support duplicate elements
+- it is ordered, changeable.
+- key should be unique and value should be of any data type
