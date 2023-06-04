@@ -1,4 +1,5 @@
 alphabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+alphabet1=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 def encryption(plain_text,shift_key):
   cipher_text=""
   for char in plain_text:   #if decrypt shift_key=shift_key*-1
@@ -6,6 +7,10 @@ def encryption(plain_text,shift_key):
       position=alphabet.index(char)
       new_position=(position+shift_key)%26
       cipher_text+=alphabet[new_position]
+    elif char in alphabet1:
+      position=alphabet1.index(char)
+      new_position=(position+shift_key)%26
+      cipher_text+=alphabet1[new_position]
     else:
       cipher_text+=char
   print(f"Here's is the your message after encryption: {cipher_text}")
@@ -16,13 +21,17 @@ def decryption(cipher_text,shift_key):
       position=alphabet.index(char)
       new_position=(position-shift_key)%26
       plain_text+=alphabet[new_position]
+    elif char in alphabet1:
+      position=alphabet1.index(char)
+      new_position=(position-shift_key)%26
+      plain_text+=alphabet1[new_position]
     else:
       plain_text+=char
   print(f"Here's is the your message after decryption: {plain_text}")
 wanna_end=False
 while not wanna_end:
   what_to_do=input("Type 'encrypt' for encryption,type 'decrypt' for decryption:")
-  text=input("Type your message:").lower()
+  text=input("Type your message:")
   shift=int(input("Enter shift key:"))
   if what_to_do=="encrypt":
     encryption(plain_text=text,shift_key=shift)
